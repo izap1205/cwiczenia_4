@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int sum = 0;
+            int b = 0;
+
+            for(int coinOne = 0; coinOne <= 10; coinOne++)
+            {
+                for(int coinTwo = 0; coinTwo <= 5; coinTwo++)
+                {
+
+                    for(int coinFive = 0; coinFive <= 2; coinFive++)
+                    {
+
+                        if(coinOne * 1 + coinTwo * 2 + coinFive * 5 == 10)
+                        {
+                            b++;
+                        }
+                    }
+                }
+            }
+
+            Console.WriteLine(b);
+
+            Console.ReadKey();
+
+        }
+    }
+}
