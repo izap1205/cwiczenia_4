@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char choice;
+            int hours;
+            double price = 0.45;
+            double rate = 0;
+            Console.WriteLine("Który wariant wybierasz, a czy b < b to 50 zl / h > ?");
+            choice = char.Parse(Console.ReadLine());
+            Console.WriteLine("Ile godzin ?");
+            hours = int.Parse(Console.ReadLine());
+
+            if (choice == 'b' || choice == 'B' )
+            {
+                Console.WriteLine(50 * hours);
+
+            } else if (choice == 'a' || choice == 'A' )
+            {
+                if(hours == 1)
+                {
+                    Console.WriteLine(price);
+                } else
+                {
+                    for(int i = 1; i < hours; i++)
+                {
+                        price *= 2;
+                    }
+
+                    Console.WriteLine(price);
+                }
+            }
+
+
+
+            Console.ReadKey();
+
+        }
+    }
+}
