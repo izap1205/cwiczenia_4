@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int number;
+            string star = "*";
+            string space = " ";
+            Console.WriteLine("Wprowadź liczbę wierszy");
+            number = int.Parse(Console.ReadLine());
+
+            for(int i = 0; i < number; i++)
+            {
+                star += "*";
+            }
+            Console.WriteLine(star);
+
+            for (int i = 0; i < (number - 2); i++)
+            {
+                space += " ";
+            }
+
+            for (int i = 0; i < number; i++)
+            {
+                
+                Console.WriteLine("*" + space + "*");
+            }
+
+            Console.WriteLine(star);
+
+            Console.ReadKey();
+
+        }
+    }
+}
